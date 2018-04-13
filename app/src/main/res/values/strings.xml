@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ProyectoAndroidExpertos2018</string>
+    <string name="app_name">Let´s trip!</string>
+    <string name="titleActivityProduct">Búsqueda por producto</string>
+    <string name="titleActivityPackage">Búsqueda por paquete</string>
+    <string name="titleActivityTour">Búsqueda por tour</string>
+    <string name="titleActivityItinerary">Búsqueda por itinerario</string>
+    <string name="titleActivityAtraction">Búsqueda por atracción</string>
+    <string name="titleActivityActivity">Búsqueda por actividad</string>
+    <string name="titleActivityResult">Resultados</string>
+    <string name="titleActivityDetail">Detalles</string>
+    <string name="titleActivityHelp">Ayuda</string>
 </resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item  android:id="@+id/item1"
+            android:title="Sobre nosotros"
+            />
+        <item  android:id="@+id/item2"
+            android:title="Búsqueda por producto"
+            />
+        <item  android:id="@+id/item3"
+            android:title="Búsqued por paquete"
+            />
+        <item  android:id="@+id/item4"
+            android:title="Búsqueda por tour"
+            />
+        <item  android:id="@+id/item5"
+            android:title="Búsqueda por itinerario"
+            />
+        <item  android:id="@+id/item6"
+            android:title="Búsqueda por atracción"
+            />
+        <item  android:id="@+id/item7"
+            android:title="Búsqueda por actividad"
+            />
+        <item  android:id="@+id/item8"
+            android:title="Ayuda"
+            />
+
+
+</menu>

@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainimage"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtVAbout"
+        android:layout_width="256dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="126dp"
+        android:text="Pellentesque euismod tempor ultrices. Duis id posuere felis. Vivamus aliquam ex et risus luctus, id faucibus metus hendrerit. Curabitur fermentum tortor massa, eget vehicula ex dignissim et. Vestibulum quis varius ante. Nulla volutpat ipsum nec eros accumsan, vitae congue urna lobortis. Maecenas dictum feugiat eros, viverra efficitur quam porttitor eget. Nunc gravida felis nec erat finibus efficitur. Donec iaculis leo orci. Nunc ut nisi ipsum. Duis cursus nunc in velit convallis sollicitudin. Vestibulum sit amet accumsan ex. Phasellus luctus lacus in dignissim pulvinar. Curabitur ultricies lacus non lacinia faucibus. Sed varius lectus at mattis lobortis." />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="101dp"
+        android:layout_height="79dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="31dp"
+        app:srcCompat="@drawable/village" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSubMen"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="82dp"
+        android:background="@null"
+        app:srcCompat="@drawable/letsgo" />
+
+</RelativeLayout>

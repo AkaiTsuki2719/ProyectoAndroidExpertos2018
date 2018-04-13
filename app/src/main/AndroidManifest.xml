@@ -4,16 +4,117 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/airballoon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SubMenuActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ProductSearchActivity"
+            android:label="@string/titleActivityProduct">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PackageSearchActivity"
+            android:label="@string/titleActivityPackage">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".TourSearchActivity"
+            android:label="@string/titleActivityTour">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItinerarySearchActivity"
+            android:label="@string/titleActivityItinerary">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AtractionSearchActivity"
+            android:label="@string/titleActivityAtraction">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivitySearchActivity"
+            android:label="@string/titleActivityActivity">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResultSearchActivity"
+            android:label="@string/titleActivityResult">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".DetailSearchActivity"
+            android:label="@string/titleActivityDetail">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/titleActivityHelp">
+            <intent-filter>
+                <action android:name="android.intent.action." />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>
