@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,4 +7,75 @@
     tools:context=".ItinerarySearchActivity"
     android:background="@drawable/mainimage">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/txtVNumberodStops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/spnNumberofStops"
+        android:layout_marginStart="16dp"
+        android:text="Número de paradas:"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="43dp" />
+
+    <TextView
+        android:id="@+id/txtVFeedeing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtVNumberodStops"
+        android:layout_alignTop="@+id/spnFeeding"
+        android:text="Alimentación incuida:"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <TextView
+        android:id="@+id/txtVNumberofDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtVNumberodStops"
+        android:layout_alignTop="@+id/spnNumberofDays"
+        android:text="Número de días:"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="161dp" />
+
+    <Spinner
+        android:id="@+id/spnFeeding"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/spnNumberofDays"
+        android:layout_marginTop="112dp"
+        tools:layout_editor_absoluteX="166dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <Spinner
+        android:id="@+id/spnNumberofDays"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/spnNumberofStops"
+        android:layout_marginTop="174dp"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="148dp" />
+
+    <Spinner
+        android:id="@+id/spnNumberofStops"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="31dp"
+        android:layout_marginTop="51dp"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="33dp" />
+
+    <Button
+        android:id="@+id/btnSearchItinerary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="167dp"
+        android:text="Buscar!"
+        android:background="@drawable/borders"/>
+</RelativeLayout>

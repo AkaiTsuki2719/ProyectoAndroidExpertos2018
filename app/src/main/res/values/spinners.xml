@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <string-array name="numberofstops">
+            <item>Menos de 3</item>
+            <item>De 3 a 6</item>
+            <item>Más de 6</item>
+
+        </string-array>
+
+    <string-array name="feeding">
+        <item>Si</item>
+        <item>No</item>
+
+    </string-array>
+
+    <string-array name="numberofdays">
+        <item>1</item>
+        <item>De 1 a 2</item>
+        <item>Más de 2</item>
+
+    </string-array>
+
+</resources>
