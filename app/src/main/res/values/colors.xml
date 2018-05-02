@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorTitle">#107B85</color>
     <color name="loadSplash">#476186</color>
+    <color name="defaultWhite">#FFFFFF</color>
+    <color name="navigationBar">#2F9295</color>
 </resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btnActivitySearch"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="93dp"
+        android:layout_x="114dp"
+        android:layout_y="393dp"
+        android:background="@drawable/bg_button"
+        android:text="Buscar" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="102dp"
+        android:layout_toStartOf="@+id/btnActivitySearch"
+        android:layout_x="16dp"
+        android:layout_y="292dp"
+        android:text="Tipo de actividad" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="21dp"
+        android:layout_y="108dp"
+        android:text="Ubicación"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="189dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="3dp"
+        android:layout_y="200dp"
+        android:text="Duración de la actividad"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <Spinner
+        android:id="@+id/spnAtivityTime"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:layout_x="146dp"
+        android:layout_y="197dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <Spinner
+        android:id="@+id/spnActivityType"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:layout_x="142dp"
+        android:layout_y="288dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="26dp" />
+
+    <Spinner
+        android:id="@+id/spnActivityPlace"
+        android:layout_width="198dp"
+        android:layout_height="42dp"
+        android:layout_x="146dp"
+        android:layout_y="102dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="26dp" />
+</AbsoluteLayout>

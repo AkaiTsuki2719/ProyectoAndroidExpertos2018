@@ -20,70 +20,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SubMenuActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ProductSearchActivity"
-            android:label="@string/titleActivityProduct">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".PackageSearchActivity"
-            android:label="@string/titleActivityPackage">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".TourSearchActivity"
-            android:label="@string/titleActivityTour">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ItinerarySearchActivity"
-            android:label="@string/titleActivityItinerary">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".AtractionSearchActivity"
-            android:label="@string/titleActivityAtraction">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ActivitySearchActivity"
-            android:label="@string/titleActivityActivity">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action." />
 
@@ -100,16 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DetailSearchActivity"
-            android:label="@string/titleActivityDetail">
-            <intent-filter>
-                <action android:name="android.intent.action." />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".HelpActivity"
+            android:name=".StereotypeActivity"
             android:label="@string/titleActivityHelp">
             <intent-filter>
                 <action android:name="android.intent.action." />
@@ -117,6 +45,9 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/title_activity_details"></activity>
     </application>
 
 </manifest>

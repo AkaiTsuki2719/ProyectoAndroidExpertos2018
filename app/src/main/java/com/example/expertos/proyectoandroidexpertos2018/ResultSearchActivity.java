@@ -11,8 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-
 public class ResultSearchActivity extends AppCompatActivity{
 
     private ListView lstResults;
@@ -32,53 +30,7 @@ public class ResultSearchActivity extends AppCompatActivity{
         getMenuInflater().inflate(R.menu.menu_main, menu);//Menu Resource, Menu
         return true;
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item1:
-                //start activity
-                Intent intentMain = new Intent(ResultSearchActivity.this, MainActivity.class);
-                startActivity(intentMain);
-                return true;
-            case R.id.item2:
-                //start activity
-                Intent intentProduct = new Intent(ResultSearchActivity.this, ProductSearchActivity.class);
-                startActivity(intentProduct);
-                return true;
-            case R.id.item3:
-                //start activity
-                Intent intentPackage= new Intent(ResultSearchActivity.this, PackageSearchActivity.class);
-                startActivity(intentPackage);
-                return true;
-            case R.id.item4:
-                //start activity
-                Intent intentTour = new Intent(ResultSearchActivity.this, TourSearchActivity.class);
-                startActivity(intentTour);
-                return true;
-            case R.id.item5:
-                //start activity
-                Intent intentItinerary = new Intent(ResultSearchActivity.this, ItinerarySearchActivity.class);
-                startActivity(intentItinerary);
-                return true;
-            case R.id.item6:
-                //start activity
-                Intent intentAtraction = new Intent(ResultSearchActivity.this, AtractionSearchActivity.class);
-                startActivity(intentAtraction);
-                return true;
-            case R.id.item7:
-                //start activity
-                Intent intentActivity = new Intent(ResultSearchActivity.this, ActivitySearchActivity.class);
-                startActivity(intentActivity);
-                return true;
-            case R.id.item8:
-                //start activity
-                Intent intentHelp = new Intent(ResultSearchActivity.this, HelpActivity.class);
-                startActivity(intentHelp);
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+
 
     public void start(){
 
@@ -95,7 +47,7 @@ public class ResultSearchActivity extends AppCompatActivity{
                 // TODO Auto-generated method stub
                 Toast.makeText(getApplicationContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
                 //start activity buy
-                Intent intentDetail = new Intent(ResultSearchActivity.this, DetailSearchActivity.class);
+                Intent intentDetail = new Intent(ResultSearchActivity.this, DetailsActivity.class);
                 startActivity(intentDetail);
             }
 

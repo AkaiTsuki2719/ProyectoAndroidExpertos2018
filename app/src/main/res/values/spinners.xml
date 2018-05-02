@@ -21,4 +21,52 @@
 
     </string-array>
 
+    <string-array name="placepreferences">
+        <item>Playa</item>
+        <item>Montaña</item>
+        <item>Ciudad</item>
+        <item>Pueblo</item>
+
+    </string-array>
+
+    <string-array name="agerange">
+        <item>Menor de 18 años</item>
+        <item>Entre 18 y 30 años</item>
+        <item>Entre 30 y 50 años</item>
+        <item>Mayor a 50 años</item>
+
+    </string-array>
+
+    <string-array name="usergender">
+        <item>Mujer</item>
+        <item>Hombre</item>
+        <item>No aplica</item>
+
+    </string-array>
+
+    <string-array name="activitypreference">
+        <item>Descansar y relajarme</item>
+        <item>Compartir con mi familia</item>
+        <item>Buscar nuevas aventuras</item>
+
+    </string-array>
+
+    <string-array name="spendpreference">
+        <item>No importa el precio</item>
+        <item>Puedo darme un gusto</item>
+        <item>Debo cuidar mi billetera</item>
+
+    </string-array>
+
+    <string-array name="searchtype">
+        <item>Seleccione un tipo de búsqueda</item>
+        <item>Búsqueda por producto</item>
+        <item>Búsqueda por paquetes</item>
+        <item>Búsqueda por tour</item>
+        <item>Búsqeda por itinerario</item>
+        <item>Búsqueda por actividad</item>
+        <item>Búsqueda por atracción</item>
+
+    </string-array>
+
 </resources>

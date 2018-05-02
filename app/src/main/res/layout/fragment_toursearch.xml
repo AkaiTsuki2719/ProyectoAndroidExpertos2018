@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btnTourSearch"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="93dp"
+        android:layout_x="132dp"
+        android:layout_y="423dp"
+        android:background="@drawable/bg_button"
+        android:text="Buscar" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="60dp"
+        android:layout_x="47dp"
+        android:layout_y="73dp"
+        android:text="Precio" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="282dp"
+        android:text="Distancia"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="48dp"
+        android:layout_y="181dp"
+        android:text="Guía"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="261dp" />
+
+    <Spinner
+        android:id="@+id/spn"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_x="138dp"
+        android:layout_y="183dp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_x="131dp"
+        android:layout_y="280dp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <Spinner
+        android:id="@+id/spnPrice"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_x="131dp"
+        android:layout_y="69dp"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="69dp" />
+</AbsoluteLayout>

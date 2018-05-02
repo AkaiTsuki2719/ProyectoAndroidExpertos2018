@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="14dp"
+        android:layout_y="26dp"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="23dp" />
+
+    <TextView
+        android:id="@+id/txtVAbout"
+        android:layout_width="256dp"
+        android:layout_height="287dp"
+        android:layout_marginTop="122dp"
+        android:layout_x="51dp"
+        android:layout_y="119dp"
+        android:text="Pellentesque euismod tempor ultrices. Duis id posuere felis. Vivamus aliquam ex et risus luctus, id faucibus metus hendrerit. Curabitur fermentum tortor massa, eget vehicula ex dignissim et. Vestibulum quis varius ante. Nulla volutpat ipsum nec eros accumsan, vitae congue urna lobortis. Maecenas dictum feugiat eros, viverra efficitur quam porttitor eget. Nunc gravida felis nec erat finibus efficitur. Donec iaculis leo orci. Nunc ut nisi ipsum. Duis cursus nunc in velit convallis sollicitudin. Vestibulum sit amet accumsan ex. Phasellus luctus lacus in dignissim pulvinar. Curabitur ultricies lacus non lacinia faucibus. Sed varius lectus at mattis lobortis."
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="54dp"
+        android:layout_y="66dp"
+        android:text="Información del servicio"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="139dp"
+        tools:layout_editor_absoluteY="55dp" />
+
+</AbsoluteLayout>

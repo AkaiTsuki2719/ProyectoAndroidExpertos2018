@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_general_info"
+        android:icon="@drawable/information_place"
+        android:title="Infomración general" />
+
+    <item
+        android:id="@+id/nav_services"
+        android:icon="@drawable/services"
+        android:title="Servicios" />
+
+    <item
+        android:id="@+id/nav_gallery"
+        android:icon="@drawable/gallery"
+        android:title="Galeria" />
+
+
+</menu>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Inicio" />
+
+        <item  android:id="@+id/nav_tourSearch"
+            android:icon="@drawable/tour"
+            android:title="Búsqueda por tour"
+            />
+        <item  android:id="@+id/nav_itinerarySearch"
+            android:icon="@drawable/itinerary"
+            android:title="Búsqueda por itinerario"
+            />
+        <item  android:id="@+id/nav_atracttionSearch"
+            android:icon="@drawable/atracttion"
+            android:title="Búsqueda por atracción"
+            />
+        <item  android:id="@+id/nav_activitySearch"
+            android:icon="@drawable/activity"
+            android:title="Búsqueda por actividad"
+            />
+
+    </group>
+
+    <item android:title="Información">
+        <menu>
+            <item
+                android:id="@+id/nav_help"
+                android:icon="@drawable/help"
+                android:title="Ayuda" />
+
+        </menu>
+    </item>
+
+</menu>
