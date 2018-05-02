@@ -14,9 +14,9 @@
 
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="261dp"
         android:layout_height="wrap_content"
-        android:paddingLeft="190dp"
+        android:paddingLeft="180dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:text="Menú"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
