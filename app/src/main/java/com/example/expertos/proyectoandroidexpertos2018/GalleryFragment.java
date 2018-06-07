@@ -112,12 +112,12 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
             jsonDetailCompany = new JSONObject(getActivity().getIntent().getStringExtra("dataDetail"));
 
 
-            String videoUrl= jsonDetailCompany.get("video").toString();
-            String video= videoUrl.replace("\\", "");
+            String videoUrl = jsonDetailCompany.get("video").toString();
+            String video = videoUrl.replace("\\", "");
 
             String frameVideo1 = "<html><body>Video From YouTube<br><iframe width=\"330\" height=\"250\" src=\"";
             String frameVideo2 = "\" frameborder=\"0\" allowfullscreen></iframe></body></html>";
-            String finalFrameVideo = frameVideo1+video+frameVideo2;
+            String finalFrameVideo = frameVideo1 + video + frameVideo2;
 
 
             WebView displayYoutubeVideo = v.findViewById(R.id.mWebView);
@@ -176,6 +176,7 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
         jsonDetailImages = jsonDetailCompany.getJSONArray("img");
         HashMapForURL = new HashMap<String, String>();
 
+        String change = "";
         for (int currentImage = 0; currentImage < jsonDetailImages.length(); currentImage++) {
 
             jsonImage = jsonDetailImages.getJSONObject(currentImage);
@@ -183,7 +184,8 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
             String imageUrl = jsonImage.get("imgRoute").toString();
             String image = imageUrl.replace("\\", "");
 
-            HashMapForURL.put(jsonDetailCompany.get("nombre").toString(), image);
+            HashMapForURL.put(jsonDetailCompany.get("nombre").toString() + currentImage, image);
+
         }
     }
 

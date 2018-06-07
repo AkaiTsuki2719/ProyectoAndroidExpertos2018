@@ -74,9 +74,9 @@ public class ServicesFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
                 // TODO Auto-generated method stub
-                FragmentManager fragmentManager = getFragmentManager();
+               // FragmentManager fragmentManager = getFragmentManager();
 
-                fragmentManager.beginTransaction().replace(R.id.container2, new ServiceInfoFragment()).commit();
+                //fragmentManager.beginTransaction().replace(R.id.container2, new ServiceInfoFragment()).commit();
             }
 
         });
@@ -98,40 +98,47 @@ public class ServicesFragment extends Fragment {
         jsonDetailTour = jsonDetailCompany.getJSONArray("tour");
         jsonDetailItinerary = jsonDetailCompany.getJSONArray("itinerario");
 
+
         ArrayList<Model> models = new ArrayList<Model>();
 
         if(jsonDetailActivity.length() >= 1){
+            String service = "Actividad";
             for(int currentActivity = 0; currentActivity < jsonDetailActivity.length();currentActivity++){
                 jsonService = jsonDetailActivity.getJSONObject(currentActivity);
 
-                models.add(new Model(R.drawable.options,jsonService.get("nombre_actividad").toString(),jsonService.get("id_actividad").toString()));
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_actividad").toString(),service));
+
             }
 
         }
 
         if(jsonDetailAttraction.length() >= 1){
-            for(int currentAtraction = 0; currentAtraction < jsonDetailActivity.length();currentAtraction++){
+            String service = "Atraccion";
+            for(int currentAtraction = 0; currentAtraction < jsonDetailAttraction.length();currentAtraction++){
                 jsonService = jsonDetailAttraction.getJSONObject(currentAtraction);
 
-                models.add(new Model(R.drawable.options,jsonService.get("nombre_atraccion").toString(),jsonService.get("id_atraccion").toString()));
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_atraccion").toString(),service));
             }
 
         }
 
         if(jsonDetailTour.length() >= 1){
-            for(int currentTour = 0; currentTour < jsonDetailActivity.length();currentTour++){
+            String service = "Tour";
+            for(int currentTour = 0; currentTour < jsonDetailTour.length();currentTour++){
                 jsonService = jsonDetailTour.getJSONObject(currentTour);
 
-                models.add(new Model(R.drawable.options,jsonService.get("nombre_tour").toString(),jsonService.get("id_tour").toString()));
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_tour").toString(),service));
             }
 
         }
 
         if(jsonDetailItinerary.length() >= 1){
-            for(int currentItinerary = 0; currentItinerary < jsonDetailActivity.length();currentItinerary++){
+            String service = "Itinerario";
+            for(int currentItinerary = 0; currentItinerary < jsonDetailItinerary.length();currentItinerary++){
                 jsonService = jsonDetailItinerary.getJSONObject(currentItinerary);
 
-                models.add(new Model(R.drawable.options,jsonService.get("nombre_itinerario").toString(),jsonService.get("id_itinerario").toString()));
+
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_itinerario").toString(),service));
             }
 
         }

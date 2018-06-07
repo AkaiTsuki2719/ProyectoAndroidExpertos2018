@@ -48,14 +48,14 @@ public class ItinerarySearchFragment extends Fragment implements View.OnClickLis
         // Apply the adapter to the spinner
         spnItineraryT.setAdapter(adapterTransport);
 
-        spnItineraryS = v.findViewById(R.id.spnItineraryD);
+        spnItineraryD = v.findViewById(R.id.spnItineraryD);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapterDistance = ArrayAdapter.createFromResource(getContext(),
                 R.array.itinerarydistance, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
         adapterDistance.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spnItineraryS.setAdapter(adapterDistance);
+        spnItineraryD.setAdapter(adapterDistance);
 
         spnItineraryS = v.findViewById(R.id.spnItineraryS);
         // Create an ArrayAdapter using the string array and a default spinner layout
