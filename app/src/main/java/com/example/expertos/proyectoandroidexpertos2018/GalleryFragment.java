@@ -30,6 +30,8 @@ import java.util.HashMap;
 
 public class GalleryFragment extends Fragment implements View.OnClickListener, BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
 
+    //
+    //declaracion de variables
     SliderLayout sliderLayout;
     HashMap<String, String> HashMapForURL;
     ImageView imgVBack3;
@@ -39,8 +41,12 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
 
         View v = inflater.inflate(R.layout.fragment_gallery, null);
 
+        //
+        //inicializar variable de componentes
         imgVBack3 = v.findViewById(R.id.imgVBack3);
 
+        //
+        //listener para redireccionar a los resultados previamente cargados
         imgVBack3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,7 +68,8 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
         });
 
 
-        //image slider
+       //
+       //cargar image slider con contenido respectivo
         sliderLayout = v.findViewById(R.id.slider);
 
         //Call this method if you want to add images from URL .
@@ -71,12 +78,6 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        //Call this method to add images from local drawable folder .
-        //AddImageUrlFormLocalRes();
-
-        //Call this method to stop automatic sliding.
-        //sliderLayout.stopAutoCycle();
 
         for (String name : HashMapForURL.keySet()) {
 
@@ -105,12 +106,12 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
 
         sliderLayout.addOnPageChangeListener(this);
 
-        //youtube video
+        //
+        //cargar youtube video respectivo en el componente
         JSONObject jsonDetailCompany;
 
         try {
             jsonDetailCompany = new JSONObject(getActivity().getIntent().getStringExtra("dataDetail"));
-
 
             String videoUrl = jsonDetailCompany.get("video").toString();
             String video = videoUrl.replace("\\", "");
@@ -118,7 +119,6 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
             String frameVideo1 = "<html><body>Video From YouTube<br><iframe width=\"330\" height=\"250\" src=\"";
             String frameVideo2 = "\" frameborder=\"0\" allowfullscreen></iframe></body></html>";
             String finalFrameVideo = frameVideo1 + video + frameVideo2;
-
 
             WebView displayYoutubeVideo = v.findViewById(R.id.mWebView);
             displayYoutubeVideo.setWebViewClient(new WebViewClient() {
@@ -166,6 +166,8 @@ public class GalleryFragment extends Fragment implements View.OnClickListener, B
 
     }
 
+    //
+    //metodo para cargar url de las imagenes
     public void AddImagesUrlOnline(String dataResult) throws JSONException {
 
         JSONObject jsonDetailCompany;

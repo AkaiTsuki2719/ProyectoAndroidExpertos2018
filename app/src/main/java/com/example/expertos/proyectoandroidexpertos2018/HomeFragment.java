@@ -31,6 +31,8 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
 
+    //
+    //inicializar variables
     private Button btnGo;
     DrawerLayout menu;
     private TextView txtVTitle;
@@ -41,11 +43,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         View v= inflater.inflate(R.layout.fragment_home, null);
 
+        //
+        //intanciar shared preferences de estereotipo
         SharedPreferences prefs = getActivity().getSharedPreferences("estereoripos", Context.MODE_PRIVATE);
 
-
-
-
+        //
+        //inicializar variables respecto a sus componentes
         btnGo = v.findViewById(R.id.btnGo);
         btnGo.setOnClickListener((View.OnClickListener) this);
 
@@ -60,8 +63,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
-
-
+        //
+        //desplegar menu
         menu.openDrawer(Gravity.LEFT);
     }
 }

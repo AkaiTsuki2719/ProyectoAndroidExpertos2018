@@ -41,6 +41,8 @@ import java.net.URL;
 
 public class PlaceInformationFragment extends Fragment implements View.OnClickListener, OnMapReadyCallback {
 
+    //
+    //inicializar variables
     DrawerLayout menu;
     private GoogleMap mMap;
     ImageView imgVBack;
@@ -55,10 +57,14 @@ public class PlaceInformationFragment extends Fragment implements View.OnClickLi
 
         View v = inflater.inflate(R.layout.fragment_place_information, null);
 
+        //
+        //inicializar componentes respectivos
         imgVBack = v.findViewById(R.id.imgVBack);
         txtVAbout = v.findViewById(R.id.txtVAbout);
         imgVCompanyP = v.findViewById(R.id.imgVCompanyP);
 
+        //
+        //redireccionar a resultados
         imgVBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +84,10 @@ public class PlaceInformationFragment extends Fragment implements View.OnClickLi
                 }
             }
         });
-       // Toast.makeText(getContext(), getActivity().getIntent().getStringExtra("dataDetail"), Toast.LENGTH_LONG).show();
+
+
+        //
+        //cargar imagen y descipción de la empresa
         JSONObject jsonDetailCompany;
         JSONArray jsonDetailImages;
         JSONObject jsonImage;
@@ -108,6 +117,8 @@ public class PlaceInformationFragment extends Fragment implements View.OnClickLi
         }
 
 
+        //
+        //cargar mapa de ubicación
         SupportMapFragment mapFragment = (SupportMapFragment) this.getChildFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 
 public class SearchResultActivity extends AppCompatActivity {
 
+    //inicializar variables
     ImageView imgVBack2;
 
 
@@ -29,6 +30,7 @@ public class SearchResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_result);
 
+        //inicializar componentes respectivos
         imgVBack2 = findViewById(R.id.imgVBack2);
         imgVBack2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +42,8 @@ public class SearchResultActivity extends AppCompatActivity {
         });
 
 
+        //
+        //decidir que cargar en la vista
         if (SearchResultActivity.this.getIntent().getStringExtra("dataBack") != null) {
 
             // 1. pass context and data to the custom adapter
@@ -126,6 +130,8 @@ public class SearchResultActivity extends AppCompatActivity {
 
     private ArrayList<Model> generateData(String dataResult) throws JSONException {
 
+        //
+        //modelo de la lista
         JSONArray jsonArray = new JSONArray(dataResult);
         ArrayList<Model> models = new ArrayList<Model>();
 

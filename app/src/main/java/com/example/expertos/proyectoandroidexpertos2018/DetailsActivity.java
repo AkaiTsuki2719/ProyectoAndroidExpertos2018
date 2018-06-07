@@ -11,8 +11,12 @@ import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    //
+    //declaracion de variables
     private TextView mTextMessage;
 
+    //
+    //declaracion de la funcionalidad respectivas a la barra de navegacion
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -41,11 +45,15 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
+        //
+        //inicializar variables de componentes
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        FragmentManager fragmentManager= getSupportFragmentManager();
 
+        //
+        //fragment inicial
+        FragmentManager fragmentManager= getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.container2, new PlaceInformationFragment()).commit();
     }
 

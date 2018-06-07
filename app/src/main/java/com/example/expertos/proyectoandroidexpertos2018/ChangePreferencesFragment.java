@@ -32,6 +32,8 @@ import org.json.JSONObject;
 
 public class ChangePreferencesFragment extends Fragment implements View.OnClickListener {
 
+      //
+    //declaracion de variables
     private Button btnReady;
     private ProgressBar pgrBLoading2;
     private Spinner spnFirstQuestion;
@@ -46,6 +48,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_change_preferences, null);
 
+        //
+        //inicializar variables de componentes
         imgBtnWhat = v.findViewById(R.id.imgBtnWhat);
         imgBtnWhat.setOnClickListener(this);
 
@@ -55,8 +59,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
         pgrBLoading2 = v.findViewById(R.id.pgrBLoading2);
         pgrBLoading2.setVisibility(View.INVISIBLE);
 
-
-        //spiner genero
+        //
+        //cargar los spinner con los valores especificos
         spnFirstQuestion = v.findViewById(R.id.spnFirstQuestion);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapterGender = ArrayAdapter.createFromResource(getContext(),
@@ -107,6 +111,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
         spnFifthQuestion.setAdapter(adapterSpend);
 
 
+        //
+        //usar sharedprefernces de estereotipo para cargar valores previamente seleccionados por el usuario en la vista de generar estereotipo
         SharedPreferences prefs = getActivity().getSharedPreferences("estereoripos", Context.MODE_PRIVATE);
 
         spnFirstQuestion.setSelection(adapterGender.getPosition(prefs.getString("genero", null)));
@@ -119,6 +125,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
     }
 
 
+    //
+    //Dialogo de para explicar el fin de la vista
     public void openDialog(View view) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         alertDialogBuilder.setMessage("Queremos pedirte información relacionada a tus preferencias como turista para así mejorar tu experiencia durante el uso de nuestra aplicación....");
@@ -138,20 +146,23 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
 
         if (view.getId() == R.id.btnReady) {
 
+            //
+            //intanciar sharedpreferences estereotipo para guardar nuevos valores
             final SharedPreferences prefs = this.getActivity().getSharedPreferences("estereoripos", Context.MODE_PRIVATE);
 
-
-
+            //
+            //saber si sharedpreferences estereotipo esta cargado
             if (prefs.getString("estereotipo", null) == null) {
 
             } else {
 
+                //
+                //crear url de la peticion
                 String url = "https://letstripapp.000webhostapp.com/api/estereotipo/obtener?genero="+spnFirstQuestion.getSelectedItem().toString().substring(0,1)+"&edad="+ spnSecondQuestion.getSelectedItem().toString()+"&preferencia_lugar="+ spnThirdQuestion.getSelectedItem().toString()+"&que_busca="+ spnFourthQuestion.getSelectedItem().toString()+"&disposicion_economica="+ spnFifthQuestion.getSelectedItem().toString();
-
                 String finalUrl = url.replace(" ", "%20");
 
-                pgrBLoading2.setVisibility(View.VISIBLE);
-
+                //
+                //realizar peticion
                 HttpClient client = new HttpClient(new OnHttpRequestComplete() {
                     @Override
                     public void onComplete(Response status) {
@@ -160,7 +171,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
                             try {
                                 JSONObject jsono = new JSONObject(status.getResult());
 
-
+                                //
+                                //eliminar valores antiguos de sharedpreferences
                                 prefs.edit().remove("estereotipo").commit();
                                 prefs.edit().remove("genero").commit();
                                 prefs.edit().remove("edad").commit();
@@ -168,7 +180,8 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
                                 prefs.edit().remove("busca").commit();
                                 prefs.edit().remove("dinero").commit();
 
-
+                                //
+                                //cargar sharedpreferences con nuevos valores
                                 SharedPreferences.Editor editor = prefs.edit();
                                 editor.putString("estereotipo", jsono.get("estereotipo").toString());
                                 editor.putString("genero", spnFirstQuestion.getSelectedItem().toString());
@@ -188,17 +201,16 @@ public class ChangePreferencesFragment extends Fragment implements View.OnClickL
                 });
                 client.excecute(finalUrl);
 
+                //
+                //redireccionar a fragment home
                 FragmentManager fragmentManager = getFragmentManager();
-
                 fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).addToBackStack(null).commit();
-
-
-            }
-
+                }
 
         } else {
             if (view.getId() == R.id.imgBtnWhat) {
-
+                //
+                //en caso de presionar imageview de informacion
                 openDialog(view);
 
             }
