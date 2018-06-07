@@ -5,6 +5,18 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="38dp"
+        android:layout_y="50dp"
+        android:text="Qué te gustaría encontrar?"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="11dp" />
+
     <Button
         android:id="@+id/btnItinerarySearch"
         android:layout_width="120dp"
@@ -12,22 +24,28 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="93dp"
-        android:layout_x="119dp"
-        android:layout_y="407dp"
+        android:layout_x="120dp"
+        android:layout_y="410dp"
         android:background="@drawable/bg_button"
-        android:text="Buscar" />
+        android:drawableLeft="@drawable/find"
+        android:drawablePadding="5dp"
+        android:text="Buscar"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="79dp"
         android:layout_marginTop="84dp"
-        android:layout_x="14dp"
-        android:layout_y="82dp"
-        android:text="Número de paradas" />
+        android:layout_x="5dp"
+        android:layout_y="140dp"
+        android:text="Número de paradas:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView10"
@@ -36,45 +54,49 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView9"
         android:layout_marginTop="162dp"
-        android:layout_x="13dp"
-        android:layout_y="180dp"
-        android:text="Translado" />
+        android:layout_x="5dp"
+        android:layout_y="230dp"
+        android:text="Translado:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="wrap_content"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView9"
         android:layout_marginTop="261dp"
-        android:layout_x="11dp"
-        android:layout_y="283dp"
-        android:text="Distancia del recorrido" />
+        android:layout_x="5dp"
+        android:layout_y="320dp"
+        android:text="Distancia del  recorrido:"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="168dp"
-        android:layout_height="46dp"
-        android:layout_x="186dp"
-        android:layout_y="183dp"
+        android:id="@+id/spnItineraryT"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="230dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="21dp" />
 
     <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="175dp"
-        android:layout_height="46dp"
-        android:layout_x="181dp"
-        android:layout_y="285dp"
+        android:id="@+id/spnItineraryS"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="140dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="21dp" />
 
     <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="166dp"
-        android:layout_height="46dp"
-        android:layout_x="186dp"
-        android:layout_y="80dp"
+        android:id="@+id/spnItineraryD"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="320dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="21dp" />
 </AbsoluteLayout>

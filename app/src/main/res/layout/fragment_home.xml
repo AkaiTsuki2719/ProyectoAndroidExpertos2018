@@ -4,32 +4,51 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/txtVAbout"
+        android:id="@+id/txtVAbout1"
         android:layout_width="256dp"
-        android:layout_height="287dp"
+        android:layout_height="78dp"
         android:layout_marginTop="122dp"
-        android:layout_x="51dp"
-        android:layout_y="119dp"
-        android:text="Pellentesque euismod tempor ultrices. Duis id posuere felis. Vivamus aliquam ex et risus luctus, id faucibus metus hendrerit. Curabitur fermentum tortor massa, eget vehicula ex dignissim et. Vestibulum quis varius ante. Nulla volutpat ipsum nec eros accumsan, vitae congue urna lobortis. Maecenas dictum feugiat eros, viverra efficitur quam porttitor eget. Nunc gravida felis nec erat finibus efficitur. Donec iaculis leo orci. Nunc ut nisi ipsum. Duis cursus nunc in velit convallis sollicitudin. Vestibulum sit amet accumsan ex. Phasellus luctus lacus in dignissim pulvinar. Curabitur ultricies lacus non lacinia faucibus. Sed varius lectus at mattis lobortis."
-        android:textSize="16sp" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="85dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_x="226dp"
-        android:layout_y="34dp"
-        android:background="@drawable/village" />
+        android:layout_x="46dp"
+        android:layout_y="68dp"
+        android:text="Somos una apliación que busca mejorar la experiencia turistica de nuestros usuarios."
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtVAbout2"
+        android:layout_width="256dp"
+        android:layout_height="118dp"
+        android:layout_marginTop="122dp"
+        android:layout_x="46dp"
+        android:layout_y="156dp"
+        android:drawableLeft="@drawable/atracttion"
+        android:drawablePadding="5dp"
+        android:text="Let's Trip! siempre intenta darte recomendaciones basados en tus gustos, para que tengas la mejor experiencia de viaje."
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtVAbout3"
+        android:layout_width="256dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="122dp"
+        android:layout_x="45dp"
+        android:layout_y="282dp"
+        android:drawableLeft="@drawable/activity"
+        android:drawablePadding="5dp"
+        android:text="Te brindamos información completa de las empresas de turismo para que no tengas que recurrir a otro medios."
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtVTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="14dp"
-        android:layout_y="75dp"
-        android:text="Bienvenido a Let's trip!"
-        android:textSize="18sp" />
+        android:layout_x="38dp"
+        android:layout_y="21dp"
+        android:text="Bienvenido"
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnGo"
@@ -38,9 +57,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="93dp"
-        android:layout_x="114dp"
-        android:layout_y="434dp"
+        android:layout_x="120dp"
+        android:layout_y="409dp"
         android:background="@drawable/bg_button"
+        android:drawableLeft="@drawable/go"
+        android:drawablePadding="5dp"
         android:text="Vamos!" />
 
 </AbsoluteLayout>

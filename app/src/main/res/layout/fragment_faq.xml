@@ -23,8 +23,8 @@
         android:layout_x="113dp"
         android:layout_y="55dp"
         android:text="¿Pregunta?"
-        android:textSize="24sp"
-        android:textStyle="italic" />
+        android:textSize="24dp"
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/textView21"

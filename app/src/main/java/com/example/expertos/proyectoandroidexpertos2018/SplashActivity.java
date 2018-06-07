@@ -4,7 +4,9 @@ import com.example.expertos.proyectoandroidexpertos2018.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -55,16 +57,33 @@ public class SplashActivity extends Activity {
 
         setContentView(R.layout.activity_splash);
 
-        
-        //thread to splash activity
-        new Handler().postDelayed(new Runnable(){
-            public void run(){
-                // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicaci�n
-                Intent intent = new Intent(SplashActivity.this, StereotypeActivity.class);
-                startActivity(intent);
-                finish();
-            };
-        }, DURACION_SPLASH);
+        SharedPreferences prefs =
+                getSharedPreferences("estereoripos", Context.MODE_PRIVATE);
+
+
+        if(prefs.getString("estereotipo", null) == null){
+            //thread to splash activity
+            new Handler().postDelayed(new Runnable(){
+                public void run(){
+                    // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicaci�n
+                    Intent intent = new Intent(SplashActivity.this, StereotypeActivity.class);
+                    startActivity(intent);
+                    finish();
+                };
+            }, DURACION_SPLASH);
+        }else {
+            //thread to splash activity
+            new Handler().postDelayed(new Runnable() {
+                public void run() {
+                    // Cuando pasen los 3 segundos, pasamos a la actividad principal de la aplicaci�n
+                    Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+
+                ;
+            }, DURACION_SPLASH);
+        }
         // Upon interacting with UI controls, delay any scheduled hide()
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.

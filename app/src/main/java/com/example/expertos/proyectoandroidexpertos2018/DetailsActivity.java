@@ -21,13 +21,13 @@ public class DetailsActivity extends AppCompatActivity {
             FragmentManager fragmentManager = getSupportFragmentManager();
             switch (item.getItemId()) {
                 case R.id.nav_general_info:
-                    fragmentManager.beginTransaction().replace(R.id.container2, new PlaceInformationFragment()).addToBackStack(null).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container2, new PlaceInformationFragment()).setCustomAnimations(R.anim.enter_left, R.anim.exit_right, R.anim.enter_right, R.anim.exit_left).commit();
                     return true;
                 case R.id.nav_services:
-                    fragmentManager.beginTransaction().replace(R.id.container2, new ServicesFragment()).addToBackStack(null).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container2, new ServicesFragment()).setCustomAnimations(R.anim.enter_left, R.anim.exit_right, R.anim.enter_right, R.anim.exit_left).commit();
                     return true;
                 case R.id.nav_gallery:
-                    fragmentManager.beginTransaction().replace(R.id.container2, new GalleryFragment()).addToBackStack(null).commit();
+                    fragmentManager.beginTransaction().replace(R.id.container2, new GalleryFragment()).setCustomAnimations(R.anim.enter_left, R.anim.exit_right, R.anim.enter_right, R.anim.exit_left).commit();
                     return true;
             }
             return false;

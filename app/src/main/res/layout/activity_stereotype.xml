@@ -1,153 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".StereotypeActivity"
-    android:background="@drawable/mainimage">
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginStart="41dp"
-        android:layout_x="4dp"
-        android:layout_y="89dp"
-        android:text="¿Cuál es tu género?" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_alignTop="@+id/spnSecondQuestion"
-        android:layout_toStartOf="@+id/spnSecondQuestion"
-        android:layout_x="0dp"
-        android:layout_y="213dp"
-        android:text="¿Qú lugar que prefiere?" />
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_alignEnd="@+id/textView15"
-        android:layout_alignTop="@+id/spnThirdQuestion"
-        android:layout_x="4dp"
-        android:layout_y="267dp"
-        android:text="¿Qué buscas?" />
-
-    <TextView
-        android:id="@+id/textView15"
-        android:layout_width="wrap_content"
+    <AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/spnFourthQuestion"
-        android:layout_x="0dp"
-        android:layout_y="325dp"
-        android:text="¿Cuánto prefieres gastar?" />
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/mainimage"
+        tools:context=".StereotypeActivity">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="5dp"
+            android:layout_y="140dp"
+            android:text="¿Cuál es tu género?"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="166dp"
+            android:layout_height="46dp"
+            android:layout_alignTop="@+id/spnSecondQuestion"
+            android:layout_x="5dp"
+            android:layout_y="320dp"
+            android:text="¿Qué lugar que prefiere?"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/spnThirdQuestion"
+            android:layout_x="5dp"
+            android:layout_y="410dp"
+            android:text="¿Qué buscas?"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/spnFourthQuestion"
+            android:layout_x="5dp"
+            android:layout_y="500dp"
+            android:text="¿Cuánto prefieres gastar?"
+            android:textSize="18dp"
+            android:textStyle="bold" />
 
 
-    <Button
-        android:id="@+id/btnReady"
-        android:layout_width="120dp"
-        android:layout_height="55dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="136dp"
-        android:layout_x="125dp"
-        android:layout_y="388dp"
-        android:background="@drawable/bg_button"
-        android:text="Listo!"
-        android:textSize="24sp" />
+        <Button
+            android:id="@+id/btnReady"
+            android:layout_width="120dp"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="136dp"
+            android:layout_x="122dp"
+            android:layout_y="590dp"
+            android:background="@drawable/bg_button"
+            android:drawableLeft="@drawable/ready"
+            android:drawablePadding="5dp"
+            android:text="Listo!"
+            android:textSize="24sp" />
 
-    <Spinner
-        android:id="@+id/spnSecondQuestion"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="178dp"
-        android:layout_toEndOf="@+id/spnFirstQuestion"
-        android:layout_x="175dp"
-        android:layout_y="149dp" />
+        <Spinner
+            android:id="@+id/spnSecondQuestion"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="178dp"
+            android:layout_x="190dp"
+            android:layout_y="230dp" />
 
-    <Spinner
-        android:id="@+id/spnFirstQuestion"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="121dp"
-        android:layout_x="173dp"
-        android:layout_y="90dp" />
+        <Spinner
+            android:id="@+id/spnFirstQuestion"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="121dp"
+            android:layout_x="190dp"
+            android:layout_y="140dp" />
 
-    <Spinner
-        android:id="@+id/spnThirdQuestion"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/spnSecondQuestion"
-        android:layout_marginTop="242dp"
-        android:layout_x="173dp"
-        android:layout_y="212dp" />
+        <Spinner
+            android:id="@+id/spnThirdQuestion"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="242dp"
+            android:layout_x="190dp"
+            android:layout_y="320dp" />
 
-    <Spinner
-        android:id="@+id/spnFourthQuestion"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/spnSecondQuestion"
-        android:layout_marginBottom="229dp"
-        android:layout_x="173dp"
-        android:layout_y="270dp" />
+        <Spinner
+            android:id="@+id/spnFourthQuestion"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="229dp"
+            android:layout_x="190dp"
+            android:layout_y="410dp" />
 
 
-    <Spinner
-        android:id="@+id/spnFifthQuestion2"
-        style="@android:style/Widget.Holo.Light.Spinner"
-        android:layout_width="160dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/spnSecondQuestion"
-        android:layout_marginBottom="229dp"
-        android:layout_x="172dp"
-        android:layout_y="325dp" />
+        <Spinner
+            android:id="@+id/spnFifthQuestion2"
+            style="@android:style/Widget.Holo.Light.Spinner"
+            android:layout_width="160dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="229dp"
+            android:layout_x="190dp"
+            android:layout_y="500dp" />
 
-    <ProgressBar
-        android:id="@+id/pgrBLoading2"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="59dp"
-        android:layout_x="167dp"
-        android:layout_y="458dp"
-        android:indeterminate="true"
-        android:indeterminateTint="#46B9AA"
-        android:visibility="visible" />
+        <ProgressBar
+            android:id="@+id/pgrBLoading2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="59dp"
+            android:layout_x="149dp"
+            android:layout_y="680dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/accent"
+            android:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="0dp"
-        android:layout_y="149dp"
-        android:text="¿Cuál es tu rango de edad?"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="151dp" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_x="5dp"
+            android:layout_y="230dp"
+            android:text="¿Cuál es tu rango de edad?"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="151dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="75dp"
-        android:layout_y="15dp"
-        android:text="Te preguntamos..."
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="24dp" />
-</AbsoluteLayout>
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="75dp"
+            android:layout_y="50dp"
+            android:text="Te preguntamos..."
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="24dp" />
+
+        <ImageButton
+            android:id="@+id/imgBtnWhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="293dp"
+            android:layout_y="7dp"
+            android:background="@drawable/bg_button"
+            app:srcCompat="@drawable/help"
+            tools:layout_editor_absoluteX="286dp"
+            tools:layout_editor_absoluteY="8dp" />
+    </AbsoluteLayout>
+</ScrollView>

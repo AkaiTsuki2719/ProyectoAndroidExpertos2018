@@ -58,15 +58,67 @@
 
     </string-array>
 
-    <string-array name="searchtype">
-        <item>Seleccione un tipo de búsqueda</item>
-        <item>Búsqueda por producto</item>
-        <item>Búsqueda por paquetes</item>
-        <item>Búsqueda por tour</item>
-        <item>Búsqeda por itinerario</item>
-        <item>Búsqueda por actividad</item>
-        <item>Búsqueda por atracción</item>
+    <string-array name="tourquantity">
+        <item>Individual</item>
+        <item>Pareja</item>
+        <item>Grupal</item>
+    </string-array>
 
+    <string-array name="tourtype">
+        <item>Cultural</item>
+        <item>Historico</item>
+        <item>Ecologico</item>
+    </string-array>
+
+    <string-array name="itinerarystop">
+        <item>Entre 1 y 2</item>
+        <item>Entre 2 y 3</item>
+        <item>Mas de 3</item>
+    </string-array>
+
+    <string-array name="itinerarytransport">
+        <item>Si</item>
+        <item>No</item>
+    </string-array>
+
+    <string-array name="itinerarydistance">
+        <item>Corta</item>
+        <item>Media</item>
+        <item>Larga</item>
+    </string-array>
+
+    <string-array name="atractiontype">
+        <item>Zona protegida</item>
+        <item>Galerias de arte</item>
+        <item>Jardines Botanicos</item>
+    </string-array>
+
+    <string-array name="atractionaccess">
+        <item>Gratis</item>
+        <item>Restringido</item>
+        <item>Con reservacion</item>
+    </string-array>
+
+    <string-array name="activityplace">
+        <item>Cartago</item>
+        <item>Alajuela</item>
+        <item>Limon</item>
+        <item>Puntarenas</item>
+        <item>Guanacaste</item>
+        <item>Heredia</item>
+        <item>San Jose</item>
+    </string-array>
+
+    <string-array name="activitytime">
+        <item>Poco</item>
+        <item>Medio</item>
+        <item>Mucho</item>
+    </string-array>
+
+    <string-array name="activitytype">
+        <item>Artistica</item>
+        <item>Religiosa</item>
+        <item>Culinaria</item>
     </string-array>
 
 </resources>

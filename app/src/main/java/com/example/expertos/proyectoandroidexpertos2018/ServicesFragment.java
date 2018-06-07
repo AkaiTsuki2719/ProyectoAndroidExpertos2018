@@ -1,5 +1,6 @@
 package com.example.expertos.proyectoandroidexpertos2018;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,14 +11,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 public class ServicesFragment extends Fragment {
 
-    private ListView lstResults;
-    private String[] results = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5",
-            "Item 6", "Otras preguntas", "Enviar comentario"};
+    ImageView imgVBack4;
 
     @Nullable
     @Override
@@ -25,24 +31,113 @@ public class ServicesFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_services, null);
 
 
-        lstResults = v.findViewById(R.id.lstVResults);
+        imgVBack4 = v.findViewById(R.id.imgVBack4);
 
-        ArrayAdapter<String> adaptador = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, results);
+        imgVBack4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-        lstResults.setAdapter(adaptador);
+                JSONArray jsonBack;
+                try {
+                    jsonBack = new JSONArray(getActivity().getIntent().getStringExtra("dataFull"));
 
-        lstResults.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+                    Intent intentDetail = new Intent(getContext(), SearchResultActivity.class);
+
+                    intentDetail.putExtra("dataBack", jsonBack.toString());
+
+                    startActivity(intentDetail);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
+        // 1. pass context and dat     a to the custom adapter
+        MyAdapter adapter = null;
+        try {
+            adapter = new MyAdapter(getContext(), generateData(getActivity().getIntent().getStringExtra("dataDetail")));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        // if extending Activity 2. Get ListView from activity_main.xml
+        ListView listView = (ListView) v.findViewById(R.id.listview);
+
+        // 3. setListAdapter
+        listView.setAdapter(adapter); //if extending Activity
+
+        //setListAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
 
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
                 // TODO Auto-generated method stub
-                FragmentManager fragmentManager= getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.container2, new ServiceInfoFragment()).addToBackStack(null).commit();
+                FragmentManager fragmentManager = getFragmentManager();
 
+                fragmentManager.beginTransaction().replace(R.id.container2, new ServiceInfoFragment()).commit();
             }
 
         });
         return v;
+    }
+
+    private ArrayList<Model> generateData(String dataResult) throws JSONException {
+
+        JSONObject jsonDetailCompany;
+        JSONArray jsonDetailTour;
+        JSONArray jsonDetailItinerary;
+        JSONArray jsonDetailActivity;
+        JSONArray jsonDetailAttraction;
+        JSONObject jsonService;
+
+        jsonDetailCompany = new JSONObject(dataResult);
+        jsonDetailActivity = jsonDetailCompany.getJSONArray("actividad");
+        jsonDetailAttraction = jsonDetailCompany.getJSONArray("atraccion");
+        jsonDetailTour = jsonDetailCompany.getJSONArray("tour");
+        jsonDetailItinerary = jsonDetailCompany.getJSONArray("itinerario");
+
+        ArrayList<Model> models = new ArrayList<Model>();
+
+        if(jsonDetailActivity.length() >= 1){
+            for(int currentActivity = 0; currentActivity < jsonDetailActivity.length();currentActivity++){
+                jsonService = jsonDetailActivity.getJSONObject(currentActivity);
+
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_actividad").toString(),jsonService.get("id_actividad").toString()));
+            }
+
+        }
+
+        if(jsonDetailAttraction.length() >= 1){
+            for(int currentAtraction = 0; currentAtraction < jsonDetailActivity.length();currentAtraction++){
+                jsonService = jsonDetailAttraction.getJSONObject(currentAtraction);
+
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_atraccion").toString(),jsonService.get("id_atraccion").toString()));
+            }
+
+        }
+
+        if(jsonDetailTour.length() >= 1){
+            for(int currentTour = 0; currentTour < jsonDetailActivity.length();currentTour++){
+                jsonService = jsonDetailTour.getJSONObject(currentTour);
+
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_tour").toString(),jsonService.get("id_tour").toString()));
+            }
+
+        }
+
+        if(jsonDetailItinerary.length() >= 1){
+            for(int currentItinerary = 0; currentItinerary < jsonDetailActivity.length();currentItinerary++){
+                jsonService = jsonDetailItinerary.getJSONObject(currentItinerary);
+
+                models.add(new Model(R.drawable.options,jsonService.get("nombre_itinerario").toString(),jsonService.get("id_itinerario").toString()));
+            }
+
+        }
+
+
+        return models;
     }
 
 

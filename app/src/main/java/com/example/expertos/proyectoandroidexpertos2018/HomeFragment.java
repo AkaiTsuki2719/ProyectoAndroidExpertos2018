@@ -1,5 +1,7 @@
 package com.example.expertos.proyectoandroidexpertos2018;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -11,12 +13,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+
+import com.example.expertos.proyectoandroidexpertos2018.utilRest.devazt.networking.HttpClient;
+import com.example.expertos.proyectoandroidexpertos2018.utilRest.devazt.networking.OnHttpRequestComplete;
+import com.example.expertos.proyectoandroidexpertos2018.utilRest.devazt.networking.Response;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 public class HomeFragment extends Fragment implements View.OnClickListener{
 
     private Button btnGo;
     DrawerLayout menu;
-    ListView menuList;
+    private TextView txtVTitle;
 
     @Nullable
     @Override
@@ -24,10 +41,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
         View v= inflater.inflate(R.layout.fragment_home, null);
 
+        SharedPreferences prefs = getActivity().getSharedPreferences("estereoripos", Context.MODE_PRIVATE);
+
+
+
+
         btnGo = v.findViewById(R.id.btnGo);
         btnGo.setOnClickListener((View.OnClickListener) this);
 
         menu= getActivity().findViewById(R.id.drawer_layout);
+
+        txtVTitle = v.findViewById(R.id.txtVTitle);
+        txtVTitle.append(" "+ prefs.getString("estereotipo", null).toUpperCase()+"!");
 
         return v;
     }
@@ -35,6 +60,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
 
     @Override
     public void onClick(View v) {
+
+
         menu.openDrawer(Gravity.LEFT);
     }
 }

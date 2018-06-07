@@ -12,66 +12,102 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="93dp"
-        android:layout_x="114dp"
-        android:layout_y="393dp"
+        android:layout_x="120dp"
+        android:layout_y="410dp"
         android:background="@drawable/bg_button"
-        android:text="Buscar" />
+        android:drawableLeft="@drawable/find"
+        android:drawablePadding="5dp"
+        android:text="Buscar"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView16"
-        android:layout_width="wrap_content"
+        android:layout_width="127dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="102dp"
-        android:layout_toStartOf="@+id/btnActivitySearch"
-        android:layout_x="16dp"
-        android:layout_y="292dp"
-        android:text="Tipo de actividad" />
+        android:layout_x="5dp"
+        android:layout_y="320dp"
+        android:text="Tipo de actividad:"
+        android:textSize="18dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="21dp"
-        android:layout_y="108dp"
-        android:text="Ubicación"
+        android:layout_x="5dp"
+        android:layout_y="140dp"
+        android:text="Ubicación:"
+        android:textSize="18dp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="189dp" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="wrap_content"
+        android:layout_width="159dp"
         android:layout_height="wrap_content"
-        android:layout_x="3dp"
-        android:layout_y="200dp"
-        android:text="Duración de la actividad"
+        android:layout_x="5dp"
+        android:layout_y="230dp"
+        android:text="Duración de la actividad:"
+        android:textSize="18dp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="44dp"
         tools:layout_editor_absoluteY="207dp" />
 
     <Spinner
-        android:id="@+id/spnAtivityTime"
-        android:layout_width="198dp"
-        android:layout_height="42dp"
-        android:layout_x="146dp"
-        android:layout_y="197dp"
+        android:id="@+id/spnAtivityTi"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="230dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="26dp" />
 
     <Spinner
-        android:id="@+id/spnActivityType"
-        android:layout_width="198dp"
-        android:layout_height="42dp"
-        android:layout_x="142dp"
-        android:layout_y="288dp"
+        android:id="@+id/spnActivityTy"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="320dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="26dp" />
 
     <Spinner
-        android:id="@+id/spnActivityPlace"
-        android:layout_width="198dp"
-        android:layout_height="42dp"
-        android:layout_x="146dp"
-        android:layout_y="102dp"
+        android:id="@+id/spnActivityP"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_x="190dp"
+        android:layout_y="140dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="26dp" />
+
+    <ProgressBar
+        android:id="@+id/pgrBLoading2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="59dp"
+        android:layout_x="149dp"
+        android:layout_y="500dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/accent"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="38dp"
+        android:layout_y="50dp"
+        android:text="Qué te gustaría encontrar?"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="11dp" />
+
 </AbsoluteLayout>

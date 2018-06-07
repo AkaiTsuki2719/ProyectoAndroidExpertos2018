@@ -31,8 +31,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.container, new HomeFragment()).commit();
+
     }
 
     @Override
@@ -72,8 +73,8 @@ public class MainActivity extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.container, new ActivitySearchFragment()).commit();
         } else if (id == R.id.nav_atracttionSearch){
             fragmentManager.beginTransaction().replace(R.id.container, new AtractionSearchFragment()).commit();
-        } else if (id== R.id.nav_help){
-            fragmentManager.beginTransaction().replace(R.id.container, new HelpFragment()).commit();
+        }  else if (id== R.id.nav_change_preferences){
+            fragmentManager.beginTransaction().replace(R.id.container, new ChangePreferencesFragment()).addToBackStack(null).commit();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

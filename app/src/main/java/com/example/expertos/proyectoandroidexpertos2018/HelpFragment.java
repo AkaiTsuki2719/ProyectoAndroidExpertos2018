@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,15 @@ public class HelpFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
                 // TODO Auto-generated method stub
+
+                FragmentManager fragmentManager = getFragmentManager();
+
+                if(position==7){
+                    fragmentManager.beginTransaction().replace(R.id.container, new FeedbackFragment()).addToBackStack(null).commit();
+                }else{
+                    fragmentManager.beginTransaction().replace(R.id.container, new FaqFragment()).addToBackStack(null).commit();
+                }
+
                 Toast.makeText(getContext(), "Ha pulsado el item " + position, Toast.LENGTH_SHORT).show();
 
             }
